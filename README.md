@@ -1,5 +1,5 @@
 # The Old Reader JS Library v.0.0.1
-## https://github.com/GaiusSensei/TOR.js
+_https://github.com/GaiusSensei/TOR.js_
 
 This is a JS Library that simplifies connections to https://github.com/krasnoukhov/theoldreader-api
 
@@ -15,32 +15,32 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
 ##### TOR.init
 * Implemented on v.0.0.1
 * This method would attempt to log in to The Old Reader.
-* Request:  TOR.init([string] YourAppName, [string] UsersEmail, [string] UsersPassword, [function] Callback);
+* TOR.init([string] YourAppName, [string] UsersEmail, [string] UsersPassword, [function] Callback);
 * Response: Callback([bool] LogInSuccessful); 
 
 #### Generic Methods
 ##### TOR.getToken
 * Implemented on v.0.0.1
 * This method would return the user's authentication token.
-* Request:  TOR.getToken([function] Callback);
+* TOR.getToken([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 ##### TOR.getUserInfo
 * Implemented on v.0.0.1
 * This method would return the user's information.
-* Request:  TOR.getToken([function] Callback);
+* TOR.getToken([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 ##### TOR.getPreferenceList
 * Implemented on v.0.0.1
 * This method would return the user's list of preferences.
-* Request:  TOR.getToken([function] Callback);
+* TOR.getToken([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 ##### TOR.getFriendList
 * Implemented on v.0.0.1
 * This method would return the user's list of friends.
-* Request:  TOR.getToken([function] Callback);
+* TOR.getToken([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 #### Folders
@@ -54,8 +54,8 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
 
 ### F.A.Q.
 
-1. It's throwing an `Origin http://fiddle.jshell.net is not allowed by Access-Control-Allow-Origin.` error.
-* As per the [Issue#1](https://github.com/krasnoukhov/theoldreader-api/issues/1), The Old Reader API does not support cross domain requests. In order to use this library, you must ask Sir Krasnoukhov (https://github.com/krasnoukhov/theoldreader-api) to whitelist your domain.
+*Q*: It's throwing an `Origin http://fiddle.jshell.net is not allowed by Access-Control-Allow-Origin.` error.
+*A*: As per the [Issue#1](https://github.com/krasnoukhov/theoldreader-api/issues/1), The Old Reader API does not support cross domain requests. In order to use this library, you must ask Sir Krasnoukhov (https://github.com/krasnoukhov/theoldreader-api) to whitelist your domain.
 
-2. Something's wrong/There's a bug/Can you add a feature?
-* File an issue at https://github.com/GaiusSensei/TOR.js :)
+*Q*: Something's wrong/There's a bug/Can you add a feature?
+*A*: File an issue at https://github.com/GaiusSensei/TOR.js :)
