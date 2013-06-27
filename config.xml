@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.theoldreader.phonegap"
+    versionCode="10" 
+    version   = "0.0.2">
+    
+    <name>The Old Reader Phonegap Test</name>
+    
+    <description>
+        The Old Reader Phonegap Test application.
+    </description>
+    
+    <author href="https://github.com/GaiusSensei/TOR.js" email="gaiussensei@gmail.com">
+        GaiusSensei 
+    </author>
+    
+    <preference name="phonegap-version" value="2.7.0" />
+    <preference name="webviewbounce" value="false" />    
+    <preference name="permissions" value="none"/>
+</widget>

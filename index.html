@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The Old Reader Phonegap Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Flat UI Styles -->
+    <link href="flatui/bootstrap.css" rel="stylesheet">
+    <link href="flatui/bootstrap-responsive.css" rel="stylesheet">
+    <link href="flatui/flat-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="navbar-inner">
+                <span class="brand" style="font-size:bigger;">&nbsp;The Old Reader Phonegap Test</span>
+            </div>
+        </div>
+        <!-- Login -->
+        <div class="offset6 span3 well">
+            <h2>Welcome!</h2>
+            <input class="input-block-level" type="email" id="inputEmail" placeholder="Email" />
+            <input class="input-block-level" type="password" id="inputPassword" placeholder="Password" />
+            <a class="btn pull-right" href="#" onclick="login();" id="buttonLogin">
+                Login to Old Reader</a>
+            <br />
+            <br />
+        </div>
+        <!-- Console -->
+        <div class="offset2 span8">
+            <h3>Console</h3>
+            <textarea class="input-block-level" rows="8" id="txtConsole"></textarea>
+        </div>
+    </div>
+    
+    <!-- Application Scripts -->
+    <script src="phonegap.js"></script>
+    <script src="lib/tor.js"></script>    
+    <script type="text/javascript">
+        // Console Writer
+        var logs = "";        
+        var w = function wF(l) {
+            logs = getTimeStamp() + "> " + l + "\n\n" + logs;
+            $("#txtConsole").text(logs);
+        };
+        // Commands
+        var login = function loginF() {
+            if ($("#buttonLogin").hasClass("disabled")) {
+                return;
+            }
+            $("#buttonLogin").addClass("disabled");
+            TOR.init(
+                "PhonegapTest",
+                $("#inputEmail").val(),
+                $("#inputPassword").val(),
+                function initCallbackF(success){
+                    if (success) {
+                        w("Login Successful! Token: " + TOR.authToken);
+                    } else {
+                        w("Login Failed! (Invalid Credentials or Request Failed)");
+                        $("#buttonLogin").removeClass("disabled");
+                    }
+                });
+        };
+        // Util
+        var getTimeStamp = function getTimeStampF() {
+            var now = new Date();
+            return ((now.getMonth() + 1) + '/' + (now.getDate()) + '/' + now.getFullYear() + " " + now.getHours() + ':' +
+                    ((now.getMinutes() < 10) ? ("0" + now.getMinutes()) : (now.getMinutes())) + ':' + 
+                    ((now.getSeconds() < 10) ? ("0" + now.getSeconds()) : (now.getSeconds())));
+        };
+    </script>    
+    <!-- Flat UI Scripts -->
+    <script src="flatui/jquery-1.8.3.min.js"></script>
+    <script src="flatui/bootstrap.min.js"></script>
+  </body>
+</html>

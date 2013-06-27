@@ -23,7 +23,7 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
                     }
                 } else {
                     if (callback) {
-                        callback({ status: this.statusText });
+                        callback({ "status": this.statusText });
                     }
                 }
             }
@@ -40,9 +40,9 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
         }
     };
     TOR.get = function getF(methodUrl, data, successCallback, hasNoHeader) {
-        TOR.ajax("GET", methodUrl, data, hasNoHeader, successCallback);
+        TOR.ajax("GET", methodUrl, data, successCallback, hasNoHeader);
     };
     TOR.post = function postF(methodUrl, data, successCallback, hasNoHeader) {
-        TOR.ajax("POST", methodUrl, data, hasNoHeader, successCallback);
+        TOR.ajax("POST", methodUrl, data, successCallback, hasNoHeader);
     };
 } (window.TOR = window.TOR || {}));

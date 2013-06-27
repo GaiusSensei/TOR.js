@@ -27,7 +27,7 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
         };
         TOR.get('accounts/ClientLogin', credentials, 
             function authF(data) {
-                if (data) {
+                if (data.Auth) {
                     TOR.authToken = data.Auth;
                     callback(true);
                 } else {
