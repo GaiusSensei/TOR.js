@@ -5,7 +5,7 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
 
 ### How to use:
 
-1. Reference `tor.js` (or `tor.min.js`)
+1. Reference `tor.js` (or `tor.min.js`). Can be downloaded from here: https://github.com/GaiusSensei/TOR.js/tree/master/lib
 2. Login to The Old Reader via `TOR.init(YourAppName, UsersEmail, UsersPassword)`. You can attach a callback function as an extra parameter after the User's Password, which will be called whether the login is successful or not.
 3. After successfully logging in, you may use any of the methods below.
 
@@ -25,17 +25,17 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
 
 ##### TOR.getUserInfo
 * Implemented on v.0.0.1; This method would return the user's information.
-* **TOR.getToken**([function] Callback);
+* **TOR.getUserInfo**([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 ##### TOR.getPreferenceList
 * Implemented on v.0.0.1; This method would return the user's list of preferences.
-* **TOR.getToken**([function] Callback);
+* **TOR.getPreferenceList**([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 ##### TOR.getFriendList
 * Implemented on v.0.0.1; This method would return the user's list of friends.
-* **TOR.getToken**([function] Callback);
+* **TOR.getFriendList**([function] Callback);
 * Response: Callback([JSONObject] response); 
 
 #### Folders
@@ -51,7 +51,7 @@ This is a JS Library that simplifies connections to https://github.com/krasnoukh
 
 *Q*: It's throwing an `Origin http://something.com is not allowed by Access-Control-Allow-Origin.` error.
 
-*A*: As per the [Issue#1](https://github.com/krasnoukhov/theoldreader-api/issues/1), The Old Reader API does not support cross domain requests. In order to use this library, you must ask Sir Krasnoukhov (https://github.com/krasnoukhov/theoldreader-api) to whitelist your domain.
+*A*: As per the [Issue#1](https://github.com/krasnoukhov/theoldreader-api/issues/1), The Old Reader API does not support cross domain requests. In order to use this library, you must ask Sir [Krasnoukhov](https://github.com/krasnoukhov/theoldreader-api) to whitelist your domain.
 
 *Q*: Something's wrong/There's a bug/Can you add a feature?
 
